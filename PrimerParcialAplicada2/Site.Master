@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-     <link href="/content/bootstrap.min.css" rel="stylesheet" />    
+    <link href="/content/bootstrap.min.css" rel="stylesheet" />
     <link href="/content/toastr.css" rel="stylesheet" />
     <script src="/Scripts/jquery-3.0.0.min.js"></script>
     <script src="/Scripts/bootstrap.min.js"></script>
@@ -13,8 +13,6 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-  
-
 
 </head>
 <body>
@@ -36,8 +34,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registros
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="/UI/Registros/rCuentas.aspx">Cuentas</a>
-                                <a class="dropdown-item" href="/UI/Registros/rDepositos.aspx">Depositos</a>
+                                <a class="dropdown-item" href="/IU/Registro/rCuentas.aspx">Cuentas</a>
+                                <a class="dropdown-item" href="/IU/Registro/rDepositos.aspx">Depositos</a>
                             </div>
                         </li>
 

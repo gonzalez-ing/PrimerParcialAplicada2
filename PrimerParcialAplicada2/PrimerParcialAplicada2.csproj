@@ -83,8 +83,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
-    <Content Include="UI\Registro\rCuentas.aspx" />
-    <Content Include="UI\Registro\rDepositos.aspx" />
+    <Content Include="IU\Registro\rCuentas.aspx" />
+    <Content Include="IU\Registro\rDepositos.aspx" />
     <Content Include="Resources\cuenta.png" />
     <Content Include="Resources\deposito.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -129,18 +129,18 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\Registro\rCuentas.aspx.cs">
+    <Compile Include="IU\Registro\rCuentas.aspx.cs">
       <DependentUpon>rCuentas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\Registro\rCuentas.aspx.designer.cs">
+    <Compile Include="IU\Registro\rCuentas.aspx.designer.cs">
       <DependentUpon>rCuentas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registro\rDepositos.aspx.cs">
+    <Compile Include="IU\Registro\rDepositos.aspx.cs">
       <DependentUpon>rDepositos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\Registro\rDepositos.aspx.designer.cs">
+    <Compile Include="IU\Registro\rDepositos.aspx.designer.cs">
       <DependentUpon>rDepositos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -175,7 +175,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UI\Consulta\" />
+    <Folder Include="IU\Consulta\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

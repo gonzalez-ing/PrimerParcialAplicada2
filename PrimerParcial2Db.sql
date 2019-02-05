@@ -18,7 +18,6 @@ create table Depositos
 (
 	DepositoId int primary key identity(1,1),
 	Fecha Date,
-	Nombre varchar(30),
 	CuentaId int references Cuentas(CuentaId),
 	Concepto varchar(50),
 	Monto Decimal,

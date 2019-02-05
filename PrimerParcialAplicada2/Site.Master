@@ -4,11 +4,18 @@
 
 <html>
 <head runat="server">
+     <link href="/content/bootstrap.min.css" rel="stylesheet" />    
+    <link href="/content/toastr.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/toastr.min.js"></script>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -29,9 +36,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registros
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Cuentas</a>
-                                <a class="dropdown-item" href="#">Depositos</a>
-                                <a class="dropdown-item" href="#">Retiros</a>
+                                <a class="dropdown-item" href="/UI/Registros/rCuentas.aspx">Cuentas</a>
+                                <a class="dropdown-item" href="/UI/Registros/rDepositos.aspx">Depositos</a>
                             </div>
                         </li>
 
@@ -41,7 +47,6 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="#">Cuentas</a>
                                 <a class="dropdown-item" href="#">Depositos</a>
-                                <a class="dropdown-item" href="#">Retiros</a>
                             </div>
                         </li>
                     </ul>

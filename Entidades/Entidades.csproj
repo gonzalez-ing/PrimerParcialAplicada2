@@ -53,12 +53,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PrimerParcialAplicada2\PrimerParcialAplicada2.csproj">
-      <Project>{de13643d-863d-4668-a74a-21742416b0e8}</Project>
-      <Name>PrimerParcialAplicada2</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>

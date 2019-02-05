@@ -1,0 +1,15 @@
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\DAL.dll.config
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\DAL.dll
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\DAL.pdb
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\Entidades.dll
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\EntityFramework.dll
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\Entidades.pdb
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\Entidades.dll.config
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\EntityFramework.xml
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\obj\Debug\DAL.dll
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\DAL\obj\Debug\DAL.pdb

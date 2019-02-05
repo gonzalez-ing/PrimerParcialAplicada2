@@ -61,10 +61,6 @@
       <Project>{2da0e5aa-e3a9-461c-84ec-005cef273713}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PrimerParcialAplicada2\PrimerParcialAplicada2.csproj">
-      <Project>{de13643d-863d-4668-a74a-21742416b0e8}</Project>
-      <Name>PrimerParcialAplicada2</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

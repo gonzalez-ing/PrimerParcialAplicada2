@@ -18,9 +18,8 @@
                             </div>
                         </div>
                     
-                        
-                        
-                        <asp:Image ID="CategoriasImage" runat="server" Height="215px" ImageUrl="~/Resources/cuenta.png" runat="server" Width="222px" AlternateText="Imagen no disponible" ImageAlign="right" />
+                                             
+                        <asp:Image ID="CategoriasImage" runat="server" Height="305px" ImageUrl="~/Resources/cuenta.png" runat="server" Width="245px" AlternateText="Imagen no disponible" ImageAlign="right" />
                       
                         
                         <div class="col-md-6 col-md-offset-3">

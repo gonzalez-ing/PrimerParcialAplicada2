@@ -43,8 +43,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Cuentas</a>
-                                <a class="dropdown-item" href="#">Depositos</a>
+                                <a class="dropdown-item" href="/IU/Consulta/cCuentas.aspx">Cuentas</a>
+                                <a class="dropdown-item" href="/IU/Consulta/cDepositos.aspx">Depositos</a>
                             </div>
                         </li>
                     </ul>

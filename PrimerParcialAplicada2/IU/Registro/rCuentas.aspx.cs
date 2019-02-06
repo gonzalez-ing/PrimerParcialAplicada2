@@ -18,14 +18,14 @@ namespace PrimerParcialAplicada2.IU.Registro
             balanceTextBox.Text = "0";
 
         }
-        private Cuentas LlenaClase(Cuentas cuenta)
+        private Cuentas LlenaClase()
         {
-
+            Cuentas cuenta = new Cuentas();
 
             cuenta.CuentaId = Utils.ToInt(cuentaIdTextBox.Text);
             cuenta.Fecha = Convert.ToDateTime(fechaTextBox.Text).Date;
             cuenta.Nombre = nombreTextBox.Text;
-            cuenta.Balance = Utils.ToDecimal(balanceTextBox.Text);
+            cuenta.Balance = Utils.ToInt(balanceTextBox.Text);
 
             return cuenta;
 
@@ -71,43 +71,38 @@ namespace PrimerParcialAplicada2.IU.Registro
         protected void guadarButton_Click1(object sender, EventArgs e)
         {
             BLL.RepositorioBase<Cuentas> repositorio = new BLL.RepositorioBase<Cuentas>();
-            Cuentas cuentas = new Cuentas();
+            Cuentas cuenta = new Cuentas();
             bool paso = false;
 
+            cuenta = LlenaClase();
 
-            LlenaClase(cuentas);
-
-            if (IsValid)
+            if (cuenta.CuentaId == 0)
             {
-                if (cuentas.CuentaId == 0)
-                {
-                    if (paso = repositorio.Guardar(cuentas))
-
-                        Utils.ShowToastr(this, "saved successfully", "Success", "success");
-
-
-                    else
-                    {
-                        Utils.ShowToastr(this, "Error al Guardar", "Error", "error");
-
-                    }
-                    Limpiar();
-                }
-
-                else
-                {
-                    if (paso = repositorio.Modificar(cuentas))
-                    {
-                        Utils.ShowToastr(this, "Modificado  successfully", "Success", "success");
-                        Limpiar();
-                    }
-                    else
-                    {
-                        Utils.ShowToastr(this, "Error al Modificar", "Error", "error");
-
-                    }
-                }
+                paso = repositorio.Guardar(cuenta);
+                Utils.ShowToastr(this, "Guardado", "Exito", "success");
+                Limpiar();
             }
+            else
+            {
+                int id = Utils.ToInt(cuentaIdTextBox.Text);
+                BLL.RepositorioBase<Cuentas> repository = new BLL.RepositorioBase<Cuentas>();
+                cuenta = repository.Buscar(id);
+
+                if (cuenta != null)
+                {
+                    paso = repositorio.Modificar(LlenaClase());
+                    Utils.ShowToastr(this, "Modificado Correctamente", "Exito", "success");
+                }
+                else
+                    Utils.ShowToastr(this, "Id no existe", "Error", "error");
+            }
+
+            if (paso)
+            {
+                Limpiar();
+            }
+            else
+                Utils.ShowToastr(this, "No se pudo guardar", "Error", "error");
 
         }
 
@@ -124,7 +119,7 @@ namespace PrimerParcialAplicada2.IU.Registro
             var cuentas = repositorio.Buscar(id);
 
             if (cuentas == null)
-                Utils.ShowToastr(this, "No Se Pudo Elliminar Error  ", "Error", "error");
+                Utils.ShowToastr(this, "No Se Pudo Elliminar ", "Error", "error");
 
             else
                 repositorio.Eliminar(id);

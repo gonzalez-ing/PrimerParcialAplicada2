@@ -15,22 +15,12 @@ namespace PrimerParcialAplicada2.IU.Registro
         protected void Page_Load(object sender, EventArgs e)
         {
             fechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            Cuentas cuenta = new Cuentas();
 
             if (!Page.IsPostBack)
             {
                 LlenarCombos();
-                int id = Utils.ToInt(Request.QueryString["id"]);
-                if (id > 0)
-                {
-                    RepositorioBase<Depositos> repositorio = new RepositorioBase<Depositos>();
-                    var cuenta = repositorio.Buscar(id);
-
-                    if (cuenta == null)
-                        Utils.ShowToastr(this, "No Existe en la Base de datos", "Error", "error");
-
-                    else
-                        LlenaCampos(cuenta);
-                }
+                ViewState["Deposito"] = new Depositos();
             }
         }
 
@@ -53,14 +43,15 @@ namespace PrimerParcialAplicada2.IU.Registro
             cuentaDropDownList.Items.Insert(0, new ListItem("", ""));
         }
 
-        private Depositos LlenaClase(Depositos depositos)
+        private Depositos LlenaClase()
         {
+            Depositos depositos = new Depositos();
 
             depositos.DepositoId = Utils.ToInt(depositoIdTextBox.Text);
             depositos.Fecha = Utils.ToDateTime(fechaTextBox.Text);
             depositos.CuentaId = Utils.ToInt(cuentaDropDownList.SelectedValue);
             depositos.Concepto = conceptoTextBox.Text;
-            depositos.Monto = Utils.ToDecimal(montoTextBox.Text);
+            depositos.Monto = Utils.ToInt(montoTextBox.Text);
 
             return depositos;
         }
@@ -87,71 +78,77 @@ namespace PrimerParcialAplicada2.IU.Registro
 
         protected void guadarButton_Click1(object sender, EventArgs e)
         {
-            BLL.RepositorioBase<Depositos> repositorio = new BLL.RepositorioBase<Depositos>();
-            Depositos depositos = new Depositos();
             bool paso = false;
+            Repositorio repositorio = new Repositorio();
+            Depositos deposito = new Depositos();
 
-            LlenaClase(depositos);
+            deposito = LlenaClase();
 
-            if (IsValid)
+            if (deposito.DepositoId == 0)
             {
-                if (depositos.DepositoId == 0)
-                {
-                    if (paso = repositorio.Guardar(depositos))
-
-                        Utils.ShowToastr(this, "saved successfully", "Success", "success");
-
-                    else
-                    {
-                        Utils.ShowToastr(this, "Error Al Guardar", "Error", "error");
-                    }
-                }
-
-                else
-                {
-                    if (paso = repositorio.Modificar(depositos))
-                    {
-                        Utils.ShowToastr(this, "saved successfully Modificar", "Success", "success");
-                    }
-                    else
-                    {
-                        Utils.ShowToastr(this, "Error Al Modificar", "Error", "error");
-
-                    }
-                }
+                paso = repositorio.Guardar(deposito);
+                Utils.ShowToastr(this, "Guardado", "Exito", "success");
+                Limpiar();
             }
+            else
+            {
+                Repositorio repository = new Repositorio();
+                int id = Utils.ToInt(depositoIdTextBox.Text);
+                deposito = repository.Buscar(id);
+
+                if (deposito != null)
+                {
+                    paso = repository.Modificar(LlenaClase());
+                    Utils.ShowToastr(this, "Modificado", "Exito", "success");
+                }
+                else
+                    Utils.ShowToastr(this, "Id no existe", "Error", "error");
+            }
+
+            if (paso)
+            {
+                Limpiar();
+            }
+            else
+                Utils.ShowToastr(this, "No se pudo guardar", "Error", "error");
         }
 
         protected void eliminarButton_Click(object sender, EventArgs e)
         {
-            BLL.RepositorioBase<Depositos> repositorio = new BLL.RepositorioBase<Depositos>();
+            Repositorio repositorio = new Repositorio();
             int id = Utils.ToInt(depositoIdTextBox.Text);
 
-            var depositos = repositorio.Buscar(id);
+            var deposito = repositorio.Buscar(id);
 
-            if (depositos == null)
-                Utils.ShowToastr(this, "No Existe en la BD", "Error", "error");
-
+            if (deposito != null)
+            {
+                if (repositorio.Eliminar(id))
+                {
+                    Utils.ShowToastr(this, "Eliminado", "Exito", "success");
+                    Limpiar();
+                }
+                else
+                    Utils.ShowToastr(this, "No se pudo eliminar", "Error", "error");
+            }
             else
-                repositorio.Eliminar(id);
-            Utils.ShowToastr(this, "Eliminado Correctamente ", "Success", "success");
-            Limpiar();
+                Utils.ShowToastr(this, "No existe en la BD", "Error", "error");
         }
+    
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Depositos> repositorio = new RepositorioBase<Depositos>();
-            Depositos depositos = repositorio.Buscar(Utils.ToInt(depositoIdTextBox.Text));
+            Repositorio repositorio = new Repositorio();
 
-            if (depositos != null)
+            var deposito = repositorio.Buscar(Utilidades.Utils.ToInt(depositoIdTextBox.Text));
+            if (deposito != null)
             {
-                LlenaCampos(depositos);
+                LlenaCampos(deposito);
+                Utils.ShowToastr(this, "Busqueda Correcta", "Exito", "success");
             }
             else
             {
-
-                Utils.ShowToastr(this, "No Existe en la BD", "Error", "error");
                 Limpiar();
+                Utils.ShowToastr(this, "No Hay Resultado", "Error", "error");
             }
         }
     }

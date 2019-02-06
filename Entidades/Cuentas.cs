@@ -13,7 +13,7 @@ namespace Entidades
         public int CuentaId { get; set; }
         public DateTime Fecha { get; set; }
         public string Nombre { get; set; }
-        public Decimal Balance { get; set; }
+        public int Balance { get; set; }
 
         public Cuentas()
         {

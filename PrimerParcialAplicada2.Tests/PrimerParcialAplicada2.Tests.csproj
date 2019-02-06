@@ -70,6 +70,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{1edd93d7-e429-4012-847c-917a8eb3826d}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{97d3808c-f45e-484a-93d9-4fcd5353a0e5}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{2da0e5aa-e3a9-461c-84ec-005cef273713}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PrimerParcialAplicada2\PrimerParcialAplicada2.csproj">
       <Project>{DE13643D-863D-4668-A74A-21742416B0E8}</Project>
       <Name>PrimerParcialAplicada2</Name>

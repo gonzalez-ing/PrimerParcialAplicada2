@@ -55,16 +55,6 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="container">
-                                <div class="form-group">
-                                    <asp:Label ID="Label1" runat="server" Text="Total"></asp:Label>
-                                    <asp:TextBox class="form-control" ID="totalTextBox" Text="0" runat="server"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
-
-
                         <div class="panel-footer">
                             <div class="text-center">
                                 <div class="form-group" style="display: inline-block">

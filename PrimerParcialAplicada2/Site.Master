@@ -36,6 +36,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="/IU/Registro/rCuentas.aspx">Cuentas</a>
                                 <a class="dropdown-item" href="/IU/Registro/rDepositos.aspx">Depositos</a>
+                                <a class="dropdown-item" href="/IU/Registro/rPrestamos.aspx">Prestamos</a>
                             </div>
                         </li>
 
@@ -45,6 +46,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="/IU/Consulta/cCuentas.aspx">Cuentas</a>
                                 <a class="dropdown-item" href="/IU/Consulta/cDepositos.aspx">Depositos</a>
+                                 <a class="dropdown-item" href="/IU/Consulta/cPrestamos.aspx">Prestamos</a>
                             </div>
                         </li>
                     </ul>

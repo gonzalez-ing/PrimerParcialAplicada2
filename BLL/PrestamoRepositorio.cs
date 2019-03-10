@@ -23,7 +23,7 @@ namespace BLL
                 {
                     monto = item.Capital + item.Interes;
                 }
-                contexto.Cuentas.Find(prestamo.CuentaId).Balance += monto;
+               // contexto.Cuentas.Find(prestamo.CuentaId).Balance += monto;
 
                 if (contexto.Prestamos.Add(prestamo) != null)
                 {
@@ -64,8 +64,8 @@ namespace BLL
                     monto += item.Capital + item.Interes;
                 }
 
-                contexto.Cuentas.Find(prestamo.CuentaId).Balance -= montoDB;
-                contexto.Cuentas.Find(prestamo.CuentaId).Balance += monto;
+              ///  contexto.Cuentas.Find(prestamo.CuentaId).Balance -= montoDB;
+                //contexto.Cuentas.Find(prestamo.CuentaId).Balance += monto;
 
                 if (prestamo.Detalle.Count < PrestamoAnt.Count)
                 {
@@ -114,7 +114,7 @@ namespace BLL
                     monto += item.Capital + item.Interes;
                 }
 
-                contexto.Cuentas.Find(prestamo.CuentaId).Balance -= monto;
+              //  contexto.Cuentas.Find(prestamo.CuentaId).Balance -= monto;
                 contexto.Prestamos.Remove(prestamo);
 
                 if (contexto.SaveChanges() > 0)

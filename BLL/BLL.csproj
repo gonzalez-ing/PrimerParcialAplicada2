@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcularCuotas.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="PrestamoRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

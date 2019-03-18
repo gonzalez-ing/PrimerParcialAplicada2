@@ -56,7 +56,7 @@ namespace PrimerParcialAplicada2.IU.Consulta
                     break;
 
                 case 4:
-                    decimal capital = Utils.ToInt(CriterioTextBox.Text);
+                    double capital = Utils.ToInt(CriterioTextBox.Text);
                     filtro = (c => c.Capital == capital);
                     break;
             }

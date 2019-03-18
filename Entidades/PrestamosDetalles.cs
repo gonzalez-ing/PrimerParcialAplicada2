@@ -14,10 +14,10 @@ namespace Entidades
         public int Id { get; set; }
         public int PrestamoId { get; set; }
         public int NoCuota { get; set; }
-        public decimal Interes { get; set; }
-        public decimal Capital { get; set; }
-        public decimal ValorPrestamo { get; set; }
-        public decimal Balance { get; set; }
+        public double Interes { get; set; }
+        public double Capital { get; set; }
+        public double ValorPrestamo { get; set; }
+        public double Balance { get; set; }
 
         public PrestamosDetalles()
         {
@@ -29,7 +29,7 @@ namespace Entidades
             Balance = 0;
         }
 
-        public PrestamosDetalles(int id, int prestamoId, int noCuota, decimal interes, decimal capital, decimal valorPrestamo, decimal balance)
+        public PrestamosDetalles(int id, int prestamoId, int noCuota, double interes, double capital, double valorPrestamo, double balance)
         {
             Id = id;
             PrestamoId = prestamoId;

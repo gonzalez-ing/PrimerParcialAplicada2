@@ -1,5 +1,3 @@
-C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
-C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\bin\Debug\BLL.dll.config
 C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\bin\Debug\BLL.dll
 C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\bin\Debug\BLL.pdb
@@ -13,6 +11,8 @@ C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\bin\Debug\E
 C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\bin\Debug\Entidades.dll.config
 C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\bin\Debug\EntityFramework.xml
 C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\obj\Debug\BLL.dll
 C:\Users\adrianesteban\Desktop\Aplicada 2\PrimerParcialAplicada2\BLL\obj\Debug\BLL.pdb

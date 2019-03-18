@@ -17,6 +17,7 @@ namespace PrimerParcialAplicada2.IU.Registro
             if (!Page.IsPostBack)
             {
                 LlenarCombos();
+                ViewState["Prestamos"] = new Prestamos();
                 int id = Utils.ToInt(Request.QueryString["id"]);
                 FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 if (id > 0)
@@ -38,7 +39,7 @@ namespace PrimerParcialAplicada2.IU.Registro
             prestamo.Fecha = Utils.ToDateTime(FechaTextBox.Text);
             prestamo.CuentaId = Utils.ToInt(CuentaDropDownList.SelectedValue);
             prestamo.TasaInteres = Utils.ToInt(InteresTextBox.Text);
-            prestamo.Capital = Utils.ToDecimal(CapitalTextBox.Text);
+            prestamo.Capital = Utils.ToDouble(CapitalTextBox.Text);
             prestamo.Tiempo = Utils.ToInt(TiempoTextBox.Text);
             prestamo.Detalle = (List<PrestamosDetalles>)ViewState["PrestamosDetalles"];
 
@@ -53,7 +54,9 @@ namespace PrimerParcialAplicada2.IU.Registro
             CapitalTextBox.Text = prestamo.Capital.ToString();
             InteresTextBox.Text = prestamo.TasaInteres.ToString();
             TiempoTextBox.Text = prestamo.Tiempo.ToString();
-            this.BindGrid();
+
+            DetalleGridView.DataSource = prestamo.Detalle;
+            DetalleGridView.DataBind();
         }
 
         protected void BindGrid()
@@ -117,11 +120,12 @@ namespace PrimerParcialAplicada2.IU.Registro
             int id = 0;
             PrestamoRepositorio repositorio = new PrestamoRepositorio();
 
-            if (PrestamoIdTextBox.Text == string.Empty)
-                ViewState["PrestamosDetalles"] = repositorio.CalcularCuotas(Utils.ToInt(TiempoTextBox.Text), Utils.ToDouble(CapitalTextBox.Text), (Utils.ToDouble(InteresTextBox.Text)) / 100 / 12);
-            else
-                ViewState["PrestamosDetalles"] = repositorio.CalcularCuotasModificadas((List<PrestamosDetalles>)ViewState["PrestamosDetalles"], id, Utils.ToInt(TiempoTextBox.Text), Utils.ToDouble(CapitalTextBox.Text), (Utils.ToDouble(InteresTextBox.Text) / 100 / 12));
+            List<PrestamosDetalles> cuotas = new List<PrestamosDetalles>();
 
+            if (PrestamoIdTextBox.Text == string.Empty)
+                cuotas = repositorio.CalcularCuotas(Utils.ToInt(TiempoTextBox.Text), Utils.ToDouble(CapitalTextBox.Text), (Utils.ToDouble(InteresTextBox.Text)));
+           
+            ViewState["PrestamosDetalles"] = cuotas;
             DetalleGridView.DataSource = ViewState["PrestamosDetalles"];
             DetalleGridView.DataBind();
         }

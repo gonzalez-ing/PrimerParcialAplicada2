@@ -18,8 +18,8 @@ namespace BLL
 
             try
             {
-                contexto.depositos.Add(deposito);
-                contexto.cuentas.Find(deposito.CuentaId).Balance += deposito.Monto;
+                contexto.Depositos.Add(deposito);
+                contexto.Cuentas.Find(deposito.CuentaId).Balance += deposito.Monto;
                 contexto.SaveChanges();
                 paso = true;
 
@@ -39,9 +39,9 @@ namespace BLL
             Contexto contexto = new Contexto();
             try
             {
-                Depositos deposito = contexto.depositos.Find(id);
-                contexto.cuentas.Find(deposito.CuentaId).Balance -= deposito.Monto;
-                contexto.depositos.Remove(deposito);
+                Depositos deposito = contexto.Depositos.Find(id);
+                contexto.Cuentas.Find(deposito.CuentaId).Balance -= deposito.Monto;
+                contexto.Depositos.Remove(deposito);
                 contexto.SaveChanges();
                 paso = true;
             }
@@ -58,8 +58,8 @@ namespace BLL
             RepositorioBase<Cuentas> repositorio = new RepositorioBase<Cuentas>();
             RepositorioBase<Cuentas> repository = new RepositorioBase<Cuentas>();
             Contexto contexto = new Contexto();
-            var Cuenta = contexto.cuentas.Find(deposito.CuentaId);
-            var CuentaAnt = contexto.cuentas.Find(depositoAnt.CuentaId);
+            var Cuenta = contexto.Cuentas.Find(deposito.CuentaId);
+            var CuentaAnt = contexto.Cuentas.Find(depositoAnt.CuentaId);
 
             Cuenta.Balance += deposito.Monto;
             CuentaAnt.Balance -= depositoAnt.Monto;
@@ -73,9 +73,9 @@ namespace BLL
             Contexto contexto = new Contexto();
             try
             {
-                Depositos DepAnt = contexto.depositos.Find(deposito.DepositoId);
+                Depositos DepAnt = contexto.Depositos.Find(deposito.DepositoId);
 
-                var cuenta = contexto.cuentas.Find(deposito.CuentaId);
+                var cuenta = contexto.Cuentas.Find(deposito.CuentaId);
 
                 if (deposito.CuentaId != DepAnt.CuentaId)
                 {

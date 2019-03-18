@@ -13,6 +13,15 @@ namespace PrimerParcialAplicada2.IU.Registro {
     public partial class rPrestamos {
         
         /// <summary>
+        /// ScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
         /// PrestamoIdTextBox control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace PrimerParcialAplicada2.IU.Registro {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PrestamoIdTextBox;
+        
+        /// <summary>
+        /// BuscarLinkButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton BuscarLinkButton;
         
         /// <summary>
         /// FechaTextBox control.
@@ -38,15 +56,6 @@ namespace PrimerParcialAplicada2.IU.Registro {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
-        /// BuscarLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton BuscarLinkButton;
         
         /// <summary>
         /// CuentaDropDownList control.
@@ -121,13 +130,13 @@ namespace PrimerParcialAplicada2.IU.Registro {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
         
         /// <summary>
-        /// CalcularButton control.
+        /// CalcularLinkButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CalcularButton;
+        protected global::System.Web.UI.WebControls.LinkButton CalcularLinkButton;
         
         /// <summary>
         /// DetalleGridView control.

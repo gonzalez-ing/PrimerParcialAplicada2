@@ -127,6 +127,7 @@
     <Content Include="PrimerP2DbDataSet.xss">
       <DependentUpon>PrimerP2DbDataSet.xsd</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\gonzalezbank - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
